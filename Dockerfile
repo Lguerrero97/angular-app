@@ -12,12 +12,8 @@ RUN npm run build
 # Etapa 2: servir el contenido con Nginx
 FROM nginx:stable-alpine
 
-# Copiar el build de Angular al directorio de Nginx
 COPY --from=build /app/dist/angular-proyect /usr/share/nginx/html
-
-# Copiar configuración personalizada de Nginx (opcional)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
