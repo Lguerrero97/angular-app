@@ -30,4 +30,9 @@ th{
 
 a, td, button{
     font-family: 'Winky Rough', cursive;
+        text-align: center;
+}
+
+td{
+    font-size: x-large;
 }

@@ -3,7 +3,7 @@
         <mat-card-title> PRODUCTOS</mat-card-title>
     </mat-card-header>
     <br>
-    <a routerLink="/add" class="btn btn-sm btn-success mb-2" style="width: max-content; background:black">Agregar
+    <a routerLink="/add" class="btn btn-sm btn-success mb-2" mat-raised-button  id="btn" style="width: max-content; background:black">Agregar
         Producto</a>
     <table class="table table-striped">
         <thead>
@@ -15,6 +15,7 @@
                 <th style="width: 10%">Acciones</th>
             </tr>
         </thead>
+        <br>
         <tbody>
             <tr *ngFor="let product of products">
                 <td>{{product.name}}</td>
@@ -22,10 +23,10 @@
                 <td>{{product.description}}</td>
                 <td><img src="{{product.image}}" /></td>
                 <td style="white-space: nowrap">
-                    <a routerLink="/edit/{{product.id}}" id="btn" class="btn btn-sm btn-primary mr-1">Editar</a>
-                    <a routerLink="/detail/{{product.id}}" id="btn" class="btn btn-sm btn-primary mr-1">Detalle</a>
+                    <a routerLink="/edit/{{product.id}}" id="btn" class="btn btn-sm btn-primary mr-1" mat-raised-button>Editar</a>
+                    <a routerLink="/detail/{{product.id}}" id="btn" class="btn btn-sm btn-primary mr-1" mat-raised-button>Detalle</a>
 
-                    <button (click)="deleteProduct(product.id)" class="btn btn-sm btn-danger btn-delete-user"
+                    <button (click)="deleteProduct(product.id)" mat-raised-button
                         [disabled]="product.isDeleting" id="btn">
                         <span *ngIf="product.isDeleting" class="spinner-border spinner-border-sm"></span>
                         <span *ngIf="!product.isDeleting">Eliminar</span>
