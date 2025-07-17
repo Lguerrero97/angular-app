@@ -1,7 +1,7 @@
-<div  class="app-banner" >
+<div  class="app-banner" *ngIf="showBanner">
   <h1 appUrbanStyle>THE STORE</h1>
   <img src="assets/img/mandala.jpg"  alt="Mandala" [ngClass]="animationClass" style=" height: 150px;">
-    <a href="/login" (click)="logout()" style="color: white;" *ngIf="showBanner">Cerrar Sesión</a>
+    <a href="/login" (click)="logout()" style="color: white;" *ngIf="!showBanner">Cerrar Sesión</a>
 </div>
 <router-outlet></router-outlet>
 
