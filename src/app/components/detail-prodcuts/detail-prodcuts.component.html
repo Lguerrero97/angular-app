@@ -1,0 +1,25 @@
+
+<div *ngIf="product; else notFound" class="product-detail-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+      <mat-card-subtitle>#{{ product.id }}</mat-card-subtitle>
+    </mat-card-header>
+<br>
+    <img
+      *ngIf="product.image"
+      mat-card-image
+      [src]="product.image"
+      alt="{{ product.name }}"
+    />
+<br>
+    <mat-card-content>
+      <p><strong>Descripción:</strong> {{ product.description }}</p>
+      <p><strong>Precio:</strong> ${{ product.price | number:'1.2-2' }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #notFound>
+  <p style="color: red;">Producto no encontrado.</p>
+</ng-template>

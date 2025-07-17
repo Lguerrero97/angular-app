@@ -1,0 +1,93 @@
+.app-banner {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+    position: relative;
+    height: 14%;
+      display: flex;
+  align-items: center;
+  gap: 20px;             
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.roll-forward {
+  position: absolute;
+  left: -100px; 
+  height: 100px;
+  animation: roll 6s linear infinite;
+}
+
+@keyframes roll {
+  0% {
+    left: -100px;
+    transform: rotate(0deg);
+  }
+  100% {
+    left: 100%;
+    transform: rotate(360deg);
+  }
+}
+
+/* 🎡 Gira en su lugar */
+.spin {
+  height: 100px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🎢 Rebota y gira */
+.bounce-spin {
+  height: 100px;
+  animation: bounceSpin 3s ease-in-out infinite;
+}
+
+@keyframes bounceSpin {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(50px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0);
+  }
+}
+
+/* 🌊 Movimiento tipo ola */
+.wave {
+  height: 100px;
+  animation: waveSpin 4s ease-in-out infinite;
+}
+
+@keyframes waveSpin {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(90deg) translateY(-10px);
+  }
+  50% {
+    transform: rotate(180deg) translateY(0);
+  }
+  75% {
+    transform: rotate(270deg) translateY(10px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}

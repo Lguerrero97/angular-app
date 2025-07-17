@@ -1,0 +1,33 @@
+img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+#btn {
+    background: rgb(0, 0, 0) !important;
+    border: 1px solid #000000 !important;
+    color: #ffffff !important;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+#btn:hover {
+    background: rgb(255, 255, 255) !important;
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    font-weight: 400;
+}
+
+mat-card-title {
+    font-family: 'Winky Rough', cursive;
+    font-size: xx-large;
+}
+th{
+    font-family: 'Winky Rough', cursive;
+    font-size: xx-large;
+}
+
+a, td, button{
+    font-family: 'Winky Rough', cursive;
+}

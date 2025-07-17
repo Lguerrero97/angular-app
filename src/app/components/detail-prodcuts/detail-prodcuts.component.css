@@ -1,0 +1,8 @@
+img{
+    width: 30%;
+}
+
+mat-card, mat-card-title, mat-card-subtitle{
+    font-family: 'Winky Rough', cursive, sans-serif;
+    font-size: xx-large ;
+}

@@ -1,0 +1,44 @@
+<mat-card appearance="outlined" style="padding: 2%;">
+    <mat-card-header>
+        <mat-card-title *ngIf="isAdd">AGREGAR PRODUCTOS</mat-card-title>
+        <mat-card-title *ngIf="!isAdd"> PRODUCTOS</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="formProducts" (ngSubmit)="onSubmit()">
+        <div class="divForm">
+            <mat-form-field appearance="fill" class="field">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" formControlName="name" />
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill" class="field">
+                <mat-label>Precio</mat-label>
+                <input matInput type="number" formControlName="price" />
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill" class="field">
+                <mat-label>Descripción</mat-label>
+                <input matInput type="text" formControlName="description" />
+            </mat-form-field>
+    
+            <div class="field" style="display: flex; flex-direction: column;">
+                <input #fileInput type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+                <button mat-raised-button style=" background:black; color: white;" type="button" (click)="openFileInput()">
+                    Subir Imagen
+                </button>
+            </div>
+        </div>
+    
+        <div *ngIf="base64Image" style="margin-top: 1rem;display: flex;justify-content: center;">
+            <img [src]="base64Image" alt="Imagen subida"
+                style="max-width: 300px; max-height: 300px; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.3);" />
+        </div>
+        <br>
+        <button type="button" class="btn btn-secondary" routerLink="/crud-products"
+            style="margin-right: 10px;">Regresar</button>
+        <button mat-raised-button id="btn" type="submit">
+            Registrar
+        </button>
+    </form>
+
+</mat-card>

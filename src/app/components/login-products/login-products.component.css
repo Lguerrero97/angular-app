@@ -1,0 +1,54 @@
+.mat-tab-group {
+  margin-bottom: 48px;
+  
+}
+
+.full-width {
+  width: 100%;
+  display: block;
+  margin-bottom: 16px;
+}
+
+button {
+  display: block;
+  margin-top: 16px;
+  font-family: 'Winky Rough', cursive, sans-serif;
+
+}
+
+
+h2{
+      font-family: 'Winky Rough', cursive, sans-serif;
+
+}
+
+::ng-deep .mat-mdc-tab-body-content {
+  overflow: hidden !important;
+}
+
+::ng-deep .mat-mdc-raised-button.mat-unthemed {
+  --mdc-protected-button-container-color: #080808 !important;
+  --mdc-protected-button-label-text-color: #ffffff !important;
+}
+
+.login-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #080808;
+}
+
+
+.tab-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  z-index: 10;
+}

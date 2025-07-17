@@ -1,0 +1,40 @@
+mat-card-title {
+    font-family: 'Winky Rough', cursive;
+    font-size: xx-large;
+}
+
+mat-form-field {
+    margin-left: 10px;
+}
+
+.field {
+    flex: 1;
+    min-width: 200px; // se adapta a pantallas pequeñas
+}
+
+.divForm {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-label, button {
+    font-family: 'Winky Rough', cursive;
+
+}
+
+#btn {
+    background: rgb(255, 255, 255) !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    color: black !important;
+    font-weight: 400;
+
+}
+
+
+#btn:hover {
+    background: rgb(0, 0, 0) !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 400;
+
+}
